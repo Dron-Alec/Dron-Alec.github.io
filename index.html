@@ -1,25 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alec Dron</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <p>Software Engineer | Designer | Creator</p>
-    </header>
-    
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Write a brief introduction about yourself here.</p>
-        </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2026 My Name</p>
-    </footer>
+  <!-- NAV -->
+  <nav class="nav">
+    <span class="nav-logo">AD</span>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Hi, I'm</p>
+      <h1 class="hero-name">Alec Dron</h1>
+      <p class="hero-tagline">I build tools at the intersection of finance, AI, and software.</p>
+      <p class="hero-sub">Full-stack developer focused on fintech, crypto infrastructure, and AI-powered applications.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Work</a>
+        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>↓</span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm a developer with a background in finance and a focus on building practical tools — things that actually get used. My work sits at the intersection of financial services, crypto infrastructure, and AI.</p>
+          <p>I build full-stack applications end-to-end: from API design and data pipelines to polished UIs. Lately I've been focused on integrating LLMs into real workflows — not demos, but production tools that automate research, surface intelligence, and replace spreadsheets.</p>
+          <p>I care about shipping things that solve real problems.</p>
+        </div>
+        <div class="about-stack">
+          <h3>Stack</h3>
+          <div class="stack-grid">
+            <div class="stack-group">
+              <p class="stack-label">Frontend</p>
+              <div class="tags">
+                <span class="tag">Next.js</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">React</span>
+                <span class="tag">Tailwind CSS</span>
+              </div>
+            </div>
+            <div class="stack-group">
+              <p class="stack-label">Backend</p>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">SQLAlchemy</span>
+                <span class="tag">Node.js</span>
+              </div>
+            </div>
+            <div class="stack-group">
+              <p class="stack-label">AI & Data</p>
+              <div class="tags">
+                <span class="tag">Anthropic Claude</span>
+                <span class="tag">Prompt Engineering</span>
+                <span class="tag">Web Scraping</span>
+              </div>
+            </div>
+            <div class="stack-group">
+              <p class="stack-label">Infra</p>
+              <div class="tags">
+                <span class="tag">Docker</span>
+                <span class="tag">Railway</span>
+                <span class="tag">Vercel</span>
+                <span class="tag">SQLite / Postgres</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+
+        <!-- Conference Radar -->
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">📡</div>
+            <div class="project-links">
+              <a href="https://github.com/Dron-Alec/TrackerApp" target="_blank" rel="noopener noreferrer" class="project-link" title="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Conference Radar</h3>
+          <p class="project-desc">AI-powered BD intelligence dashboard for tracking crypto and fintech conferences. Scores events by relevance across four service lines, generates target personas, conversation starters, and per-event analysis using Claude.</p>
+          <div class="project-highlights">
+            <p>↳ Ingests events from Eventbrite, web scrapers, and a curated catalog</p>
+            <p>↳ Claude Haiku scores each event 0–100 across audit, BSA/AML, risk, and advisory</p>
+            <p>↳ BD pipeline, contact tracker, and Excel export for reporting</p>
+          </div>
+          <div class="project-tags">
+            <span class="tag tag-accent">Next.js 16</span>
+            <span class="tag tag-accent">FastAPI</span>
+            <span class="tag tag-accent">Claude AI</span>
+            <span class="tag">Python</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">SQLite</span>
+          </div>
+        </div>
+
+        <!-- s-scan -->
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">🔍</div>
+            <div class="project-links">
+              <a href="https://github.com/Dron-Alec/s-scan-mvp" target="_blank" rel="noopener noreferrer" class="project-link" title="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">s-scan</h3>
+          <p class="project-desc">Smart contract security score analyzer. Enter any Ethereum contract address and get a 0–100 risk score combining static vulnerability analysis, on-chain age, ETH balance, and transaction activity.</p>
+          <div class="project-highlights">
+            <p>↳ Combines GoPlus Security API and Slither static analysis for vulnerability detection</p>
+            <p>↳ On-chain data via Alchemy (age, balance) and Etherscan (activity)</p>
+            <p>↳ Deployable to Streamlit Cloud (no Docker) or locally with full Slither analysis</p>
+          </div>
+          <div class="project-tags">
+            <span class="tag tag-accent">Python</span>
+            <span class="tag tag-accent">FastAPI</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Ethereum</span>
+            <span class="tag">Slither</span>
+          </div>
+        </div>
+
+        <!-- Payments Simulator -->
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">💳</div>
+            <div class="project-links">
+              <!-- No public repo yet — remove comment when available -->
+            </div>
+          </div>
+          <h3 class="project-title">Payments Simulator</h3>
+          <p class="project-desc">A full-stack payment intent simulation platform. Create, track, and manage payment intents through a dashboard UI — built to model the lifecycle of a payment from intent creation to settlement.</p>
+          <div class="project-highlights">
+            <p>↳ REST API for creating and querying payment intents</p>
+            <p>↳ Next.js dashboard with real-time intent list and status tracking</p>
+            <p>↳ Designed to simulate Stripe-style payment infrastructure</p>
+          </div>
+          <div class="project-tags">
+            <span class="tag tag-accent">Next.js</span>
+            <span class="tag tag-accent">TypeScript</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">REST API</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section id="resume" class="section">
+    <div class="container">
+      <h2 class="section-title">Resume</h2>
+      <div class="resume-box">
+        <div class="resume-icon">📄</div>
+        <div class="resume-text">
+          <h3>Alec Dron — Resume</h3>
+          <p>PDF available on request — upload coming soon.</p>
+        </div>
+        <a href="resume.pdf" class="btn btn-primary" download>Download PDF</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-alt">
+    <div class="container contact-container">
+      <h2 class="section-title">Contact</h2>
+      <p class="contact-sub">Open to new opportunities and interesting projects.</p>
+      <div class="contact-links">
+        <a href="mailto:alecdron@gmail.com" class="contact-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          alecdron@gmail.com
+        </a>
+        <a href="https://github.com/Dron-Alec" target="_blank" rel="noopener noreferrer" class="contact-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+          github.com/Dron-Alec
+        </a>
+        <a href="https://linkedin.com/in/alecdron" target="_blank" rel="noopener noreferrer" class="contact-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 Alec Dron</p>
+  </footer>
+
 </body>
 </html>
