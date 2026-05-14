@@ -306,6 +306,17 @@ body {
   line-height: 1.5;
 }
 
+.project-repo-link {
+  display: inline-block;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-family: 'Courier New', monospace;
+  transition: color 0.15s;
+  margin-top: 0.25rem;
+}
+.project-repo-link:hover { color: var(--accent); }
+
 .project-tags {
   display: flex;
   flex-wrap: wrap;
